@@ -19,7 +19,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('phone_number')->unique();
             $table->string('password');
-            $table->enum('role', UserType::getAllRoles())->default(UserType::Rider);
+            $table->enum('role', UserType::values())->default(UserType::Rider->name);
             $table->rememberToken();
             $table->timestamps();
         });

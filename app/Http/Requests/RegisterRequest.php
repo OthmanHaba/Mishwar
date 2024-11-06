@@ -28,7 +28,6 @@ class RegisterRequest extends FormRequest
             'email' => ['required_without:phone_number', 'email', 'unique:users'],
             'password' => ['required', 'string', 'min:6'],
             'type' => ['required', 'string', 'in:rider,driver'],
-
         ];
     }
 }

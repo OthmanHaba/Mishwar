@@ -16,7 +16,7 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(User::class);
             $table->string('document_url');
-            $table->enum('status', App\Enums\DriverStatus::values())->default(App\Enums\DriverStatus::Pending);
+            $table->enum('status', App\Enums\DriverStatus::names())->default(App\Enums\DriverStatus::Pending->name);
             $table->timestamp('reviewed_at')->nullable();
             $table->timestamps();
         });

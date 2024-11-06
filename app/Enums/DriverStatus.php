@@ -7,12 +7,12 @@ enum DriverStatus
     case Pending;
     case Approved;
     case Rejected;
-    public static function values(): array
+    public static function names()
     {
         return [
-            DriverStatus::Pending,
-            DriverStatus::Approved,
-            DriverStatus::Rejected,
+            'Pending' => 'Pending',
+            'Approved' => 'Approved',
+            'Rejected' => 'Rejected',
         ];
     }
 }

@@ -7,20 +7,12 @@ enum UserType
     case Admin;
     case Rider;
     case Driver;
-    public function getRole(): string
-    {
-        return match ($this) {
-            UserType::Admin => 'admin',
-            UserType::Rider => 'rider',
-            UserType::Driver => 'driver',
-        };
-    }
-    public static function getAllRoles(): array
+    public static function values(): array
     {
         return [
-            UserType::Admin => 'admin',
-            UserType::Rider => 'rider',
-            UserType::Driver => 'driver',
+            'Admin' => 'Admin',
+            'Rider' => 'Rider',
+            'Driver' => 'Driver',
         ];
     }
 }
