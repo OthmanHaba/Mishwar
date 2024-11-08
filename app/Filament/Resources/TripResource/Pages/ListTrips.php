@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\DriverResource\Pages;
+namespace App\Filament\Resources\TripResource\Pages;
 
-use App\Filament\Resources\DriverResource;
+use App\Filament\Resources\TripResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 
-class ListDrivers extends ListRecords
+class ListTrips extends ListRecords
 {
-    protected static string $resource = DriverResource::class;
+    protected static string $resource = TripResource::class;
 
     protected function getHeaderActions(): array
     {
